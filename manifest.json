@@ -1,0 +1,16 @@
+{
+  "name": "Scroll to Pin",
+  "description": "pin on the web page then scroll to it",
+  "version": "0.6",
+  "permissions": ["contextMenus", "tabs", "<all_urls>"],
+  "background": {
+    "scripts": ["bg.js"],
+    "persistent": true
+  },
+  "content_scripts": [{
+  	"js": ["content.js"],
+  	"matches": ["<all_urls>"],
+  	"run_at": "document_end"
+  }],
+  "manifest_version": 2
+}
